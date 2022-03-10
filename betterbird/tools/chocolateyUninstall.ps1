@@ -1,16 +1,16 @@
 $ErrorActionPreference = 'Stop';
 
-$packageName = 'librecad'
+$packageName = 'betterbird'
 
 $uninstalled = $false
-[array]$key = Get-UninstallRegistryKey -SoftwareName 'LibreCAD'
+[array]$key = Get-UninstallRegistryKey -SoftwareName 'Betterbird'
 
 if ($key.Count -eq 1) {
   $key | % {
     $packageArgs = @{
       packageName    = $packageName
       fileType       = 'EXE'
-      silentArgs     = '/S'
+      silentArgs     = '-ms'
       validExitCodes = @(0)
       file           = "$($_.UninstallString.Trim('"'))"
     }

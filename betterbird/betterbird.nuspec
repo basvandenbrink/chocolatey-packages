@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>betterbird</id>
+    <version>2.1.3</version>
+    <title>Betterbird</title>
+    <owners>chocolatey</owners>
+    <authors>Betterbird Project</authors>
+    <licenseUrl>https://github.com/Betterbird/thunderbird-patches/blob/main/LICENSE</licenseUrl>
+    <projectUrl>https://www.betterbird.eu/index.html</projectUrl>
+    <projectSourceUrl>https://github.com/Betterbird/thunderbird-patches</projectSourceUrl>
+    <docsUrl>https://www.betterbird.eu/support/index.html</docsUrl>
+    <bugTrackerUrl>https://github.com/Betterbird/thunderbird-patches/issues</bugTrackerUrl>
+    <iconUrl>https://raw.githubusercontent.com/Betterbird/thunderbird-patches/main/BetterbirdLauncher/BetterbirdLauncher/betterbird.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description> Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will.
+
+Betterbird is better than Thunderbird in three ways: It contains new features exclusive to Betterbird, it contains bug fixes exclusive to Betterbird and it contains fixes that Thunderbird may ship at a later stage.</description>
+    <summary>Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will.</summary>
+    <releaseNotes>https://www.betterbird.eu/releasenotes/index.html</releaseNotes>
+    <copyright />
+    <packageSourceUrl>https://github.com/basvandenbrink/au-packages/tree/master/betterbird</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
