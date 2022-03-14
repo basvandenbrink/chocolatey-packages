@@ -18,17 +18,18 @@ environment:
   au_test_groups: 1
 
   # Github token to commit pushed packages to repository
-  github_user_repo: {github_user}/{repository}
+  github_user_repo: basvandenbrink/au-packages
   github_api_key:
-    secure: YOUR_GITHUB_API_KEY_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
+    secure: fMEcTnGaI/0KNLDackgxB2WBb3A1wfqB9eavCS/osirbE27DoO9WFtACkKMv3V3B
 
 
   # Mail credentials - for error notifications
   mail_user:
-    secure: YOUR_EMAIL_ACCOUNT_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
+    secure: HXw760ES8ivNnjKxw9iqXw==
   mail_pass:
-    secure: YOUR_EMAIL_PASSWORD_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
-  mail_server: smtp.gmail.com
+    secure: 087vvXfMUI9mPRm1BUMf2Q==
+  mail_server:
+    secure: f00ZS1bpOhN9wKaDClaUQOVhxlK1SyX5LvBRTh1DasQ=
   mail_port: 587
   mail_enablessl: true
 
@@ -41,11 +42,11 @@ environment:
 
   # Chocolatey API key - to push updated packages
   api_key:
-    secure: YOUR_CHOCO_API_KEY_HERE_ENCRYPTED_STRING # https://ci.appveyor.com/tools/encrypt
+    secure: cm9Yz4/63nt+SaCl7vsyTM6mZj5fzkmexcEm5bNVQMA+7h9xLxjBEzkxSACEnGY1
 
 init:
-- git config --global user.email "chocolatey@realdimensions.net"
-- git config --global user.name "Chocolatey"
+- git config --global user.email "basvandenbrink@users.noreply.github.com"
+- git config --global user.name "Bas van den Brink"
 - git config --global core.safecrlf false
 
 install:
@@ -104,7 +105,8 @@ artifacts:
 
 notifications:
 - provider: Email
-  to: $(mail_user)
+  to:
+    secure: y2h+HLncibkLWE3HFqUO2IeYOZOODeoPFB9IXRBafPI=
   on_build_success: false
   on_build_failure: true
   on_build_status_changed: true
