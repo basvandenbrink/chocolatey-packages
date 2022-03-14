@@ -1,5 +1,5 @@
 [![](https://ci.appveyor.com/api/projects/status/github/basvandenbrink/au-packages?svg=true)](https://ci.appveyor.com/project/basvandenbrink/au-packages)
-[Update status](https://gist.github.com/basvandenbrink/78a360e9db460815ec677c60b6a23b7c)
+[Update status](https://gist.github.com/basvandenbrink/cf2abf8d848094bfaf2fa984a0c85745)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [chocolatey/BasvandenBrink](https://community.chocolatey.org/profiles/BasvandenBrink)
 
