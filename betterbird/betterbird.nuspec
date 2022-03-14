@@ -19,7 +19,8 @@
 Betterbird is better than Thunderbird in three ways: It contains new features exclusive to Betterbird, it contains bug fixes exclusive to Betterbird and it contains fixes that Thunderbird may ship at a later stage.</description>
     <summary>Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will.</summary>
     <releaseNotes>https://www.betterbird.eu/releasenotes/index.html</releaseNotes>
-    <copyright />
+    <copyright>Betterbird Project</copyright>
+    <tags>betterbird thunderbird email admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/basvandenbrink/au-packages/tree/master/betterbird</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0" />
