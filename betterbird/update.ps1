@@ -15,12 +15,14 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $releases = Invoke-WebRequest $releases
-  $version = ($releases.Content | Select-String -Pattern '<h3>Table of Downloads for version ([\.\d]+(-[\w\d]+)) \(.*\)</h3>').Matches.Groups[1].Value
-  $url   = "/downloads/WindowsInstaller/betterbird-{0}.en-US.win64.installer.exe" -f $version
+  $version_matches = ($releases.Content | Select-String -Pattern '<h3>Table of Downloads for version (([\.\d]+)(-[\w\d]+)) \(.*\)</h3>').Matches
+  $version_stripped = $version_matches.Groups[2]
+  $version_full = $version_matches.Groups[1]
+  $url   = "/downloads/WindowsInstaller/betterbird-{0}.en-US.win64.installer.exe" -f $version_full
 
   @{
     URL64 = $domain + $url
-    Version = $version
+    Version = $version_stripped
   }
 }
 
