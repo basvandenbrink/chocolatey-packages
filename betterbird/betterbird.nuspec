@@ -12,7 +12,7 @@
     <projectSourceUrl>https://github.com/Betterbird/thunderbird-patches</projectSourceUrl>
     <docsUrl>https://www.betterbird.eu/support/index.html</docsUrl>
     <bugTrackerUrl>https://github.com/Betterbird/thunderbird-patches/issues</bugTrackerUrl>
-    <iconUrl>https://cdn.statically.io/gh/basvandenbrink/chocolatey-packages/3bf07611e15bbcc3482a448fe36e38566b6b01a8/betterbird/betterbird.png</iconUrl>
+    <iconUrl>https://cdn.statically.io/gh/basvandenbrink/chocolatey-packages/cd825b77ec88335fa11e448a68769db041b010be/betterbird/betterbird.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description> Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will.
 
