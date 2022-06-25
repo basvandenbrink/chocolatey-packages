@@ -20,7 +20,7 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: basvandenbrink/au-packages
   github_api_key:
-    secure: L/Mhcq8qzpHVSHSdcQolko7jYqxYXaNJtG95DKphM/0bXcSZfr/YaVmUMkJBfB5V
+    secure: Suus7r7Hvlg284e+2O7Z56b4BrsLtyW5nVm66Rie+iqarSREOTxdHEsYANukhar2
 
 
   # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
