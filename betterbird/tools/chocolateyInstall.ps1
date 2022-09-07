@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$fullVersion = '91.13.0-bb36'
+$fullVersion = '102.2.2-bb16'
 $urlPrefix = 'https://www.betterbird.eu/downloads/WindowsInstaller/'
 $downloadFileName = 'betterbird-{0}.en-US.win64.installer.exe' -f $fullVersion
 $url = "{0}{1}" -f $urlPrefix, $downloadFileName
@@ -24,7 +24,7 @@ $packageArgs = @{
   fileType       = 'exe'
   softwareName   = 'Betterbird'
 
-  checksum       = '04f55512259899ac837b05046573b2d43e6cb5f28eb7fed00938cfe86c830baa'
+  checksum       = '653d595ee6c21742a77dc314ecf8275a9dea8f26649537dd507e872dd35119c2'
   checksumType   = 'sha256'
   url            = $url
 
