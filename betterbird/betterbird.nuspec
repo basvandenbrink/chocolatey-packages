@@ -22,10 +22,15 @@ Betterbird is better than Thunderbird in three ways: It contains new features ex
 
 - `/l:LOCALE` - Install given Betterbird locale. See the [official page](https://www.betterbird.eu/downloads/) for a complete list of available locales.
 - `/UseMozillaFallback` Makes a request to mozilla.org and reads the supported Language Culture code from the website.
+- `/InstallDir:PATH`
+- `/NoTaskbarShortcut` Do not create Taskbar Shortcut
+- `/NoDesktopShortcut` Do not create Desktop Shortcut
+- `/NoStartMenuShortcut` Do not create Start Menu Shortcut
 
 ### Examples
 
 `choco install betterbird --params "/l=en-GB"`
+`choco install thunderbird --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`   
 
 ## Notes
 

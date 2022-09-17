@@ -6,6 +6,21 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $softwareName = 'Betterbird'
 $fullVersion = '102.2.2-bb16'
 
+$pp = Get-PackageParameters
+
+$sa = ""
+
+# Always prevent Betterbird installer to require a reboot
+$sa += " /PreventRebootRequired=true"
+
+$sa += if ($pp.InstallDir) { " /InstallDirectoryPath=" + $pp.InstallDir }
+
+$sa += if ($pp.NoTaskbarShortcut) { " /TaskbarShortcut=false" }
+
+$sa += if ($pp.NoDesktopShortcut) { " /DesktopShortcut=false" }
+
+$sa += if ($pp.NoStartMenuShortcut) { " /StartMenuShortcut=false" }
+
 $locale = 'en-US' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/933
 $locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
 
@@ -38,7 +53,7 @@ $packageArgs = @{
   checksumType   = 'sha256'
   url            = $url
 
-  silentArgs     = '-ms'
+  silentArgs     = '$sa /S'
   validExitCodes = @(0)
 }
 
