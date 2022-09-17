@@ -16,8 +16,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $releases = Invoke-WebRequest $releases
   $version_matches = ($releases.Content | Select-String -AllMatches -Pattern '<h3>Table of Downloads for version (([\.\d]+)(-[\w\d]+)) \(.*\)</h3>').Matches
-  # Since the release of Betterbird 102, the download page has two entries, one for 91 and one for 102. Always pick the last entry.
-  $version_match = $version_matches[$version_matches.length - 1]
+  $version_match = $version_matches[0]
   $version_stripped = $version_match.Groups[2]
   $version_full = $version_match.Groups[1]
 
