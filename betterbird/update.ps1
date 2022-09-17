@@ -1,4 +1,5 @@
 ﻿import-module au
+. "$PSScriptRoot\update_helper.ps1"
 
 $domain   = 'https://www.betterbird.eu'
 $releases = "$domain/downloads/index.php"
@@ -7,8 +8,6 @@ function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*\`$fullVersion\s*=\s*)('.*')"        = "`$1'$($Latest.FullVersion)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum64)'"
-      "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
     }
   }
 }
@@ -26,4 +25,9 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 64 -NoCheckChocoVersion
+function global:au_AfterUpdate {
+  $version_full = $Latest.FullVersion
+  CreateChecksumsFile -ToolsDirectory "$PSScriptRoot\tools" -FullVersion $version_full
+}
+
+update -ChecksumFor none

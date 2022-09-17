@@ -1,8 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+. $toolsPath\helpers.ps1
+
+$softwareName = 'Betterbird'
 $fullVersion = '102.2.2-bb16'
+
+$locale = 'en-US' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/933
+$locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
+
 $urlPrefix = 'https://www.betterbird.eu/downloads/WindowsInstaller/'
-$downloadFileName = 'betterbird-{0}.en-US.win64.installer.exe' -f $fullVersion
+$downloadFileName = 'betterbird-{0}.{1}.win64.installer.exe' -f $fullVersion, $locale
 $url = "{0}{1}" -f $urlPrefix, $downloadFileName
 
 $wc = New-Object System.Net.WebClient
@@ -19,12 +27,14 @@ try {
   }
 }
 
+$checksum = GetChecksum -language $locale -checksumFile "$toolsPath\LanguageChecksums.csv"
+
 $packageArgs = @{
   packageName    = 'betterbird'
   fileType       = 'exe'
   softwareName   = 'Betterbird'
 
-  checksum       = '653d595ee6c21742a77dc314ecf8275a9dea8f26649537dd507e872dd35119c2'
+  checksum       = $checksum
   checksumType   = 'sha256'
   url            = $url
 

@@ -14,9 +14,27 @@
     <bugTrackerUrl>https://github.com/Betterbird/thunderbird-patches/issues</bugTrackerUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/basvandenbrink/chocolatey-packages@cd825b77ec88335fa11e448a68769db041b010be/betterbird/betterbird.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description> Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will.
+    <description><![CDATA[Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will.
 
-Betterbird is better than Thunderbird in three ways: It contains new features exclusive to Betterbird, it contains bug fixes exclusive to Betterbird and it contains fixes that Thunderbird may ship at a later stage.</description>
+Betterbird is better than Thunderbird in three ways: It contains new features exclusive to Betterbird, it contains bug fixes exclusive to Betterbird and it contains fixes that Thunderbird may ship at a later stage.
+
+## Package Parameters
+
+- `/l:LOCALE` - Install given Betterbird locale. See the [official page](https://www.betterbird.eu/downloads/) for a complete list of available locales.
+- `/UseMozillaFallback` Makes a request to mozilla.org and reads the supported Language Culture code from the website.
+
+### Examples
+
+`choco install betterbird --params "/l=en-GB"`
+
+## Notes
+
+- If locale package parameter is not present, this package installs Betterbird in the first language which matches this list:
+  1. If Betterbird is already installed: the same language as the already installed Betterbird.
+  1. The Windows system language where the Betterbird package gets installed.
+  1. Language Culture code specified on Mozilla website (only when `/UseMozillaFallback` is specified).
+  1. If Betterbird does not support the system language, it will fallback to `en-US`.
+]]></description>
     <summary>Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will.</summary>
     <releaseNotes>https://www.betterbird.eu/releasenotes/index.html</releaseNotes>
     <copyright>Betterbird Project</copyright>
