@@ -7,7 +7,7 @@ function CreateChecksumsFile() {
     [string]$ToolsDirectory,
     [string]$FullVersion
   )
-  $allChecksums = Invoke-WebRequest -UseBasicParsing -Uri "https://www.betterbird.eu/downloads/sha256-102.txt"
+  $allChecksums = Invoke-WebRequest -UseBasicParsing -Uri "https://www.betterbird.eu/downloads/sha256-115.txt"
 
   $reOpts = [System.Text.RegularExpressions.RegexOptions]::Multiline `
     -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
