@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>betterbird</id>
-    <version>115.5.1.2</version>
+    <version>115.5.2</version>
     <title>Betterbird</title>
     <owners>chocolatey</owners>
     <authors>Betterbird Project</authors>
