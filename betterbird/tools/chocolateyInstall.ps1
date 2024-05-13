@@ -4,7 +4,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
 $softwareName = 'Betterbird'
-$fullVersion = '115.10.0-bb27-hotfix'
+$fullVersion = '115.11.0-bb28'
 
 $locale = 'en-US' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/933
 $locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
