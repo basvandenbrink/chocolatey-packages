@@ -14,7 +14,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $releases = Invoke-WebRequest $releases
-  $version_matches = ($releases.Content | Select-String -AllMatches -Pattern '<h3>Betterbird (([\.\d]+)(-[\w\d]+)) "Superstar" \(.*\)</h3>').Matches
+  $version_matches = ($releases.Content | Select-String -AllMatches -Pattern '<h3>Betterbird (([\.\d]+)(esr-[\w\d]+)).*</h3>').Matches
   $version_match = $version_matches[0]
   $version_stripped = $version_match.Groups[2]
   $version_full = $version_match.Groups[1]
