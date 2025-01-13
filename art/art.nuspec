@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>art</id>
+    <version>1.24.5</version>
+    <title>ART</title>
+    <owners>chocolatey</owners>
+    <authors>Pixls.us</authors>
+    <licenseUrl>https://github.com/artpixls/ART/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://art.pixls.us</projectUrl>
+    <projectSourceUrl>https://github.com/artpixls/ART</projectSourceUrl>
+    <docsUrl>https://art.pixls.us/Documentation.html</docsUrl>
+    <bugTrackerUrl>https://github.com/artpixls/ART/issues</bugTrackerUrl>
+    <iconUrl>https://art.pixls.us/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description><![CDATA[ART, a free, open-source, cross-platform raw image processing program. ART is a derivative of the popular RawTherapee, trading a bit of customization and control over various processing parameters for a simpler and (hopefully) easier to use interface, while still maintaining the power and quality of RawTherapee.
+]]></description>
+    <summary>ART, a free, open-source, cross-platform raw image processing program. ART is a derivative of the popular RawTherapee, trading a bit of customization and control over various processing parameters for a simpler and (hopefully) easier to use interface, while still maintaining the power and quality of RawTherapee.</summary>
+    <releaseNotes>https://github.com/artpixls/ART/blob/master/RELEASE_NOTES.txt</releaseNotes>
+    <copyright>Pixls.us</copyright>
+    <tags>art</tags>
+    <packageSourceUrl>https://github.com/basvandenbrink/chocolatey-packages/tree/master/art</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
