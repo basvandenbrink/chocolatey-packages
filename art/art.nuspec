@@ -5,8 +5,8 @@
     <id>art</id>
     <version>1.24.5</version>
     <title>ART</title>
-    <owners>chocolatey</owners>
-    <authors>Pixls.us</authors>
+    <owners>BasvandenBrink</owners>
+    <authors>Gabor Horvath, RawTherapee development team, Alberto Griggio</authors>
     <licenseUrl>https://github.com/artpixls/ART/blob/master/LICENSE.txt</licenseUrl>
     <projectUrl>https://art.pixls.us</projectUrl>
     <projectSourceUrl>https://github.com/artpixls/ART</projectSourceUrl>
@@ -19,7 +19,7 @@
     <summary>ART, a free, open-source, cross-platform raw image processing program. ART is a derivative of the popular RawTherapee, trading a bit of customization and control over various processing parameters for a simpler and (hopefully) easier to use interface, while still maintaining the power and quality of RawTherapee.</summary>
     <releaseNotes>https://github.com/artpixls/ART/blob/master/RELEASE_NOTES.txt</releaseNotes>
     <copyright>Pixls.us</copyright>
-    <tags>art</tags>
+    <tags>art raw photo photography images</tags>
     <packageSourceUrl>https://github.com/basvandenbrink/chocolatey-packages/tree/master/art</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0" />
