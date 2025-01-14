@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>art</id>
-    <version>1.24.5</version>
+    <version>0.1.0</version>
     <title>ART</title>
     <owners>chocolatey</owners>
     <authors>Pixls.us</authors>
@@ -12,7 +12,7 @@
     <projectSourceUrl>https://github.com/artpixls/ART</projectSourceUrl>
     <docsUrl>https://art.pixls.us/Documentation.html</docsUrl>
     <bugTrackerUrl>https://github.com/artpixls/ART/issues</bugTrackerUrl>
-    <iconUrl>https://art.pixls.us/logo.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/basvandenbrink/chocolatey-packages@d06250928ea0b2e3242e114aad00663e61997afb/art/art.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[ART, a free, open-source, cross-platform raw image processing program. ART is a derivative of the popular RawTherapee, trading a bit of customization and control over various processing parameters for a simpler and (hopefully) easier to use interface, while still maintaining the power and quality of RawTherapee.
 ]]></description>
