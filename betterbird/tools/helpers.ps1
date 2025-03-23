@@ -24,7 +24,7 @@ function GetLocale {
     [Parameter(Mandatory = $true)]
     [string]$product
   )
-  #$availableLocales = Get-WebContent $localeUrl 2>$null
+  
   $availableLocales = Get-Content $localeFile | ForEach-Object { $_ -split '\|' | Select-Object -First 1 } | Select-Object -Unique
   Write-Debug "$($availableLocales.Count) locales are stored.`n$availableLocales"
 

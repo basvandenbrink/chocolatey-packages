@@ -21,9 +21,6 @@
     <copyright>Pixls.us</copyright>
     <tags>art raw photo photography images</tags>
     <packageSourceUrl>https://github.com/basvandenbrink/chocolatey-packages/tree/master/art</packageSourceUrl>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
