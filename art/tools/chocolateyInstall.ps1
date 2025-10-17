@@ -5,9 +5,9 @@ $packageArgs = @{
   fileType       = 'exe'
   softwareName   = 'ART'
 
-  checksum64       = '2464fef7c3493d12ae834055a85615440d427e80928f6e487e49a289317f2ec9'
+  checksum64       = 'aaa615e53f596152f8011cd7d9975e2a505223300b585e9f24449adb18f6b481'
   checksumType64   = 'sha256'
-  url64            = 'https://github.com/artpixls/ART/releases/download/1.25.9/ART_1.25.9_Win64.exe'
+  url64            = 'https://github.com/artpixls/ART/releases/download/1.25.10/ART_1.25.10_Win64.exe'
 
   silentArgs     = '/verysilent /allusers'
   validExitCodes = @(0)
