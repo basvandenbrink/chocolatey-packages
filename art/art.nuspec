@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>art</id>
-    <version>1.25.10</version>
+    <version>1.25.11</version>
     <title>ART</title>
     <owners>BasvandenBrink</owners>
     <authors>Gabor Horvath, RawTherapee development team, Alberto Griggio</authors>
