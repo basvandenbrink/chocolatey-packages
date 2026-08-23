@@ -4,13 +4,13 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
 $softwareName = 'Betterbird'
-$fullVersion = '140.13.0esr-bb25'
+$installerPrefix = '140.13.0esr-bb25'
 
 $locale = 'en-US' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/933
 $locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
 
 $urlPrefix = 'https://www.betterbird.eu/downloads/WindowsInstaller/'
-$downloadFileName = 'betterbird-{0}.{1}.win64.installer.exe' -f $fullVersion, $locale
+$downloadFileName = '{0}.{1}.win64.installer.exe' -f $installerPrefix, $locale
 $url = "{0}{1}" -f $urlPrefix, $downloadFileName
 
 $wc = New-Object System.Net.WebClient

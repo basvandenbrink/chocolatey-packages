@@ -7,27 +7,28 @@ $releases = "$domain/downloads/index.php"
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*\`$fullVersion\s*=\s*)('.*')"        = "`$1'$($Latest.FullVersion)'"
+      "(?i)(^\s*\`$installerPrefix\s*=\s*)('.*')"        = "`$1'$($Latest.InstallerPrefix)'"
     }
   }
 }
 
 function global:au_GetLatest {
-  $releases = Invoke-WebRequest $releases
-  $version_matches = ($releases.Content | Select-String -AllMatches -Pattern '<h3>Current version: Betterbird (([\.\d]+)(esr-[\w\d]+)).*</h3>').Matches
+  $installerPrefix = GetInstallerPrefix
+
+
+  $version_matches = ($installerPrefix | Select-String -AllMatches -Pattern '^betterbird-(?<Version>[0-9]+\.[0-9]+\.[0-9]+)[-a-z0-9]*$').Matches
   $version_match = $version_matches[0]
-  $version_stripped = $version_match.Groups[2]
-  $version_full = $version_match.Groups[1]
+  $version = $version_match.Groups['Version']
 
   @{
-    FullVersion = $version_full
-    Version = $version_stripped
+    InstallerPrefix = $installerPrefix
+    Version = $version
   }
 }
 
 function global:au_AfterUpdate {
-  $version_full = $Latest.FullVersion
-  CreateChecksumsFile -ToolsDirectory "$PSScriptRoot\tools" -FullVersion $version_full
+  $installerPrefix = $Latest.InstallerPrefix
+  CreateChecksumsFile -ToolsDirectory "$PSScriptRoot\tools" -InstallerPrefix $installerPrefix
 }
 
 update -ChecksumFor none
