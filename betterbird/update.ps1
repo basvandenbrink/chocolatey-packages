@@ -1,9 +1,6 @@
 ﻿import-module au
 . "$PSScriptRoot\update_helper.ps1"
 
-$domain   = 'https://www.betterbird.eu'
-$releases = "$domain/downloads/index.php"
-
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{

@@ -9,7 +9,7 @@ $installerPrefix = 'betterbird-153.7.0esr-bb13'
 $locale = 'en-US' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/933
 $locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
 
-$urlPrefix = 'https://www.betterbird.eu/downloads/WindowsInstaller/'
+$urlPrefix = 'https://betterbird-downloads.b-cdn.net/downloads/WindowsInstaller/'
 $downloadFileName = '{0}.{1}.win64.installer.exe' -f $installerPrefix, $locale
 $url = "{0}{1}" -f $urlPrefix, $downloadFileName
 

@@ -1,7 +1,7 @@
 ﻿# Inspired from from https://github.com/chocolatey-community/chocolatey-packages/blob/master/automatic/firefox/update_helper.ps1
 # import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 $localeChecksumFile = 'LanguageChecksums.csv'
-$checksumsUrl = "https://betterbird.eu/downloads/sha256-153.txt"
+$checksumsUrl = "https://betterbird-downloads.b-cdn.net/sha256-153.txt"
 
 function GetInstallerPrefix() {
   $allChecksums = Invoke-WebRequest -UseBasicParsing -Uri $checksumsUrl
